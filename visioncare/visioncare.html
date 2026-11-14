@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VisionCare | Eye Health & Vision Exercises</title>
+<style>
+:root{--navy:#142b4a;--blue:#3478f6;--pale:#eaf2ff;--bg:#f5f7fc;--green:#16845b;--red:#c62828;--ink:#203047;--muted:#68778d;--white:#fff;--line:#e4eaf3;--shadow:0 12px 32px rgba(20,43,74,.08)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}button,input{font:inherit}button{cursor:pointer;border:0}a{color:inherit;text-decoration:none}.wrap{max-width:1160px;margin:auto;padding:0 22px}
+header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{display:flex;align-items:center;gap:10px;font-weight:800;color:var(--navy);font-size:1.18rem}.logo{width:42px;height:42px;border-radius:13px;background:var(--pale);display:grid;place-items:center;color:var(--blue);font-size:24px}.navlinks{display:flex;gap:8px}.navlinks button{background:transparent;color:var(--muted);padding:10px 14px;border-radius:10px;font-weight:650}.navlinks button.active,.navlinks button:hover{background:var(--pale);color:var(--blue)}.menu{display:none;background:var(--pale);padding:9px 12px;border-radius:10px;color:var(--navy)}
+.hero{padding:58px 0 36px;display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:34px}.eyebrow{display:inline-flex;gap:8px;align-items:center;background:#e7f6ef;color:var(--green);font-weight:750;font-size:.82rem;padding:7px 12px;border-radius:99px}.hero h1{font-size:clamp(2.3rem,5vw,4rem);line-height:1.08;letter-spacing:-.04em;color:var(--navy);margin:18px 0}.hero h1 span{color:var(--blue)}.hero p{max-width:570px;color:var(--muted);font-size:1.08rem}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}.btn{padding:12px 18px;border-radius:12px;font-weight:750;display:inline-flex;align-items:center;justify-content:center;gap:8px}.primary{background:var(--blue);color:white;box-shadow:0 7px 18px #3478f633}.secondary{background:white;color:var(--navy);border:1px solid var(--line)}.hero-art{min-height:310px;border-radius:28px;background:linear-gradient(140deg,#dceaff,#f7faff 65%);display:grid;place-items:center;position:relative;overflow:hidden}.eye-illustration{width:min(80%,370px);aspect-ratio:1.35;display:grid;place-items:center;border-radius:50%;background:white;box-shadow:0 20px 50px #3478f622}.eye-shape{width:80%;height:60%;border:7px solid #9bbcff;border-radius:70% 30% 70% 30%;transform:rotate(-2deg);display:grid;place-items:center;background:#fff}.iris{width:43%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 35% 30%,#83c4ff,#3478f6 52%,#142b4a 54%,#142b4a 68%,#eaf2ff 70%);box-shadow:inset 0 0 0 8px #ffffff55}.float{position:absolute;background:#fff;border:1px solid #edf2fa;box-shadow:var(--shadow);padding:12px 15px;border-radius:15px;font-weight:700;color:var(--navy)}.float.one{top:24px;left:20px}.float.two{right:18px;bottom:24px}.section{padding:30px 0 56px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:16px;margin-bottom:20px}.section-head h2{margin:0;color:var(--navy);font-size:1.8rem;letter-spacing:-.03em}.section-head p{margin:5px 0 0;color:var(--muted)}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:white;border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:var(--shadow)}.card-icon{width:48px;height:48px;display:grid;place-items:center;border-radius:14px;background:var(--pale);font-size:24px}.card h3{margin:14px 0 7px;color:var(--navy)}.card p{color:var(--muted);margin:0 0 17px;font-size:.95rem}.card .btn{width:100%}.panel{display:none;background:white;border:1px solid var(--line);border-radius:22px;padding:25px;box-shadow:var(--shadow);margin:0 0 30px}.panel.show{display:block}.panel h2{margin:0 0 8px;color:var(--navy)}.panel .intro{color:var(--muted);margin-top:0}.test-area{margin:22px 0;background:#fbfcff;border:1px solid var(--line);border-radius:18px;min-height:250px;display:grid;place-items:center;padding:20px;text-align:center}.letter{font-size:clamp(5rem,18vw,10rem);font-weight:800;color:#111;line-height:1}.answer-row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}.answer{background:white;border:1px solid #dbe4f0;border-radius:12px;padding:11px 18px;font-weight:750;color:var(--navy);min-width:70px}.answer:hover:not(:disabled){border-color:var(--blue);background:var(--pale)}.answer:disabled{opacity:.6;cursor:default}.notice{background:#fff8e8;border:1px solid #f3dfad;color:#77551b;border-radius:14px;padding:13px 15px;font-size:.9rem;margin-top:18px}.status{color:var(--muted);font-weight:700}.exercise-layout{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:center}.exercise-visual{background:var(--pale);border-radius:18px;min-height:240px;display:grid;place-items:center;position:relative;overflow:hidden}.target{width:30px;height:30px;background:var(--blue);border-radius:50%;box-shadow:0 0 0 10px #3478f622;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)}.exercise-text h3{margin-top:0;color:var(--navy)}.progress{height:9px;background:#e9eef6;border-radius:99px;overflow:hidden;margin:12px 0}.progress span{height:100%;display:block;background:var(--green);width:0%;transition:width .3s}.history-list{display:grid;gap:10px}.history-item{display:flex;justify-content:space-between;gap:12px;background:#f8faff;border:1px solid var(--line);padding:13px 15px;border-radius:12px}.empty{color:var(--muted);padding:15px 0}.footer{padding:30px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}.footer strong{color:var(--navy)}.hidden{display:none!important}
+@media(max-width:780px){.hero{grid-template-columns:1fr;padding-top:38px}.hero-art{min-height:250px}.cards{grid-template-columns:1fr 1fr}.navlinks{display:none}.navlinks.open{display:flex;position:absolute;top:76px;left:0;right:0;background:#fff;padding:12px 20px;border-bottom:1px solid var(--line);flex-direction:column}.menu{display:block}.exercise-layout{grid-template-columns:1fr}.section-head{align-items:start;flex-direction:column}}
+@media(max-width:520px){.wrap{padding:0 15px}.cards{grid-template-columns:1fr}.hero h1{font-size:2.5rem}.panel{padding:17px}.nav{height:68px}.navlinks.open{top:68px}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <a class="brand" href="#"><span class="logo">◉</span> VisionCare</a>
+  <nav class="navlinks" id="navlinks"><button class="active" data-view="home">Home</button><button data-view="screening">Vision Screening</button><button data-view="therapy">Exercises</button><button data-view="progress">My Progress</button></nav>
+  <button class="menu" id="menuBtn" aria-label="Open menu" aria-controls="navlinks" aria-expanded="false">☰</button>
+</div></header>
+<main class="wrap">
+<section id="homeView">
+  <div class="hero">
+    <div><span class="eyebrow">✦ Your vision wellness companion</span><h1>Care for your eyes.<br><span>One step at a time.</span></h1>
+    <p>Explore simple vision screening activities, learn about eye care, and keep track of your guided exercise sessions.</p>
+    <div class="actions"><button class="btn primary" data-view="screening">Start Screening →</button><button class="btn secondary" data-view="therapy">Explore Exercises</button></div>
+  </div>
+  <div class="hero-art" aria-label="Illustration of an eye"><div class="eye-illustration"><div class="eye-shape"><div class="iris"></div></div></div><div class="float one">👁️ Eye wellness</div><div class="float two">✦ Small steps matter</div></div>
+  </div>
+  <div class="section"><div class="section-head"><div><h2>Explore VisionCare</h2><p>Simple tools for learning and building healthy habits.</p></div></div>
+    <div class="cards">
+      <article class="card"><div class="card-icon">🔎</div><h3>Vision Screening</h3><p>Try a simple letter-direction activity and learn what screening can—and cannot—tell you.</p><button class="btn secondary" data-view="screening">Open screening</button></article>
+      <article class="card"><div class="card-icon">🎯</div><h3>Guided Exercises</h3><p>Explore gentle focus and eye-movement activities. Stop if you feel discomfort.</p><button class="btn secondary" data-view="therapy">View exercises</button></article>
+      <article class="card"><div class="card-icon">📈</div><h3>Progress Tracker</h3><p>Keep a local record of completed sessions and your screening activity.</p><button class="btn secondary" data-view="progress">View progress</button></article>
+    </div>
+  </div>
+</section>
+
+<section id="screeningView" class="hidden">
+  <div class="section-head"><div><h2>Vision Screening</h2><p>Try the direction activity in a comfortable, well-lit room.</p></div><button class="btn secondary" data-view="home">← Home</button></div>
+  <div class="panel show">
+    <h2>Direction check</h2><p class="intro">Which way is the opening of the letter E facing? This is a simple interactive demonstration, not a calibrated eye exam.</p>
+    <div class="test-area"><div><div id="testLetter" class="letter">E</div><p id="testPrompt">Choose the direction of the opening.</p></div></div>
+    <div class="answer-row" id="answers"><button class="answer" data-answer="up">↑ Up</button><button class="answer" data-answer="right">→ Right</button><button class="answer" data-answer="down">↓ Down</button><button class="answer" data-answer="left">← Left</button></div>
+    <div style="display:flex;justify-content:space-between;gap:12px;align-items:center;margin-top:18px;flex-wrap:wrap"><span class="status" id="testStatus">Question 1 of 8</span><button class="btn primary" id="nextTest" disabled>Next question →</button></div>
+    <div class="notice">This activity cannot measure visual acuity or diagnose an eye condition. Screen size, viewing distance, display settings, and lighting affect results. Seek an eye-care professional for a proper assessment.</div>
+  </div>
+</section>
+
+<section id="therapyView" class="hidden">
+  <div class="section-head"><div><h2>Guided Exercises</h2><p>Educational activities—not an individualized treatment plan.</p></div><button class="btn secondary" data-view="home">← Home</button></div>
+  <div class="panel show">
+    <div class="exercise-layout">
+      <div class="exercise-visual" id="exerciseVisual"><div class="target" id="target"></div></div>
+      <div class="exercise-text"><span class="eyebrow">Gentle activity</span><h3 id="exerciseTitle">Near & far focus break</h3><p id="exerciseDescription">Look at a nearby object for a few seconds, then shift your gaze to a distant object. Repeat comfortably. Do not strain.</p><div class="progress"><span id="exerciseProgress"></span></div><p id="exerciseStatus" class="status">Session not started</p><div class="actions"><button class="btn primary" id="startExercise">Start 30-second session</button><button class="btn secondary" id="completeExercise">Mark complete</button></div></div>
+    </div>
+    <div class="notice">Vision exercises help only for certain conditions and should be recommended by a qualified eye-care professional when treating a problem. Stop if you experience pain, headache, dizziness, or worsening vision.</div>
+  </div>
+  <div class="cards" style="margin-top:18px">
+    <article class="card"><div class="card-icon">👀</div><h3>Near & far focus</h3><p>Shift focus between a comfortable near target and a distant object.</p><button class="btn secondary" data-exercise="focus">Choose exercise</button></article>
+    <article class="card"><div class="card-icon">↔️</div><h3>Eye movement break</h3><p>Slowly look left and right without moving your head, within a comfortable range.</p><button class="btn secondary" data-exercise="movement">Choose exercise</button></article>
+    <article class="card"><div class="card-icon">⏸️</div><h3>Screen rest</h3><p>Take a short break from close-up screen work and blink naturally.</p><button class="btn secondary" data-exercise="rest">Choose exercise</button></article>
+  </div>
+</section>
+
+<section id="progressView" class="hidden">
+  <div class="section-head"><div><h2>My Progress</h2><p>Your activity history is saved in this browser on this device.</p></div><button class="btn secondary" data-view="home">← Home</button></div>
+  <div class="cards" style="margin-bottom:20px">
+    <article class="card"><div class="card-icon">✓</div><h3 id="sessionCount">0</h3><p>Exercise sessions completed</p></article>
+    <article class="card"><div class="card-icon">🔎</div><h3 id="screenCount">0</h3><p>Screening activities completed</p></article>
+    <article class="card"><div class="card-icon">📅</div><h3 id="lastActivity">—</h3><p>Most recent activity</p></article>
+  </div>
+  <div class="panel show"><div class="section-head"><div><h2>Activity history</h2><p>Recent sessions on this device.</p></div><button class="btn secondary" id="clearHistory">Clear history</button></div><div id="historyList" class="history-list"><p class="empty">No activity recorded yet. Try a screening or exercise.</p></div></div>
+</section>
+</main>
+<footer class="footer"><div class="wrap"><strong>VisionCare</strong> · A learning project for eye wellness.<br>Not a medical device. Does not diagnose, treat, or replace professional eye care. Sudden vision loss, severe eye pain, flashes, or a curtain-like shadow need urgent medical attention.</div></footer>
+<script>
+const views = ["home","screening","therapy","progress"];
+function showView(view){views.forEach(v=>document.getElementById(v+"View").classList.toggle("hidden",v!==view));document.querySelectorAll("[data-view]").forEach(b=>b.classList.toggle("active",b.dataset.view===view));setMenu(false);if(view==="progress")renderHistory();window.scrollTo({top:0,behavior:"smooth"});}
+document.querySelectorAll("[data-view]").forEach(b=>b.addEventListener("click",()=>showView(b.dataset.view)));
+function setMenu(open){const btn=document.getElementById("menuBtn");document.getElementById("navlinks").classList.toggle("open",open);btn.setAttribute("aria-expanded",String(open));btn.setAttribute("aria-label",open?"Close menu":"Open menu");}
+document.getElementById("menuBtn").addEventListener("click",()=>setMenu(!document.getElementById("navlinks").classList.contains("open")));
+
+const directions=["up","right","down","left"];let question=0,score=0,chosen=null;
+function rotateLetter(direction){const deg={up:270,right:0,down:90,left:180}[direction];document.getElementById("testLetter").style.transform=`rotate(${deg}deg)`;}
+function loadQuestion(){chosen=null;const direction=directions[Math.floor(Math.random()*4)];window.currentDirection=direction;rotateLetter(direction);document.getElementById("testStatus").textContent=`Question ${question+1} of 8`;document.getElementById("testPrompt").textContent="Choose the direction of the opening.";document.getElementById("nextTest").disabled=true;document.querySelectorAll(".answer").forEach(b=>b.disabled=false);}
+document.querySelectorAll(".answer").forEach(b=>b.addEventListener("click",()=>{if(chosen)return;chosen=b.dataset.answer;const correct=chosen===window.currentDirection;if(correct)score++;document.getElementById("testPrompt").textContent=correct?"Correct choice!":"The opening faced "+window.currentDirection+".";document.getElementById("nextTest").disabled=false;document.querySelectorAll(".answer").forEach(x=>x.disabled=true);}));
+document.getElementById("nextTest").addEventListener("click",()=>{question++;if(question>=8){addActivity("Screening activity",`Completed direction demo (${score}/8 choices)`);document.getElementById("testLetter").style.transform="";document.getElementById("testLetter").textContent="✓";document.getElementById("testPrompt").textContent=`Activity complete: ${score} of 8 choices matched.`;document.getElementById("testStatus").textContent="Completed";document.getElementById("nextTest").textContent="Restart activity";document.getElementById("nextTest").disabled=false;document.getElementById("nextTest").onclick=()=>{question=0;score=0;document.getElementById("nextTest").textContent="Next question →";document.getElementById("nextTest").onclick=null;loadQuestion();};}else loadQuestion();});
+loadQuestion();
+
+const exercises={
+ focus:{title:"Near & far focus break",description:"Look at a nearby object for a few seconds, then shift your gaze to a distant object. Repeat comfortably. Do not strain.",mode:"target"},
+ movement:{title:"Gentle eye movement break",description:"Keeping your head still, slowly look left and right within a comfortable range. Avoid forcing your eyes or holding an uncomfortable position.",mode:"move"},
+ rest:{title:"Screen rest",description:"Look away from your screen at a distant object, relax your shoulders, and blink naturally. This is a simple rest break.",mode:"rest"}
+};
+let activeExercise="focus",timer=null,seconds=30;
+function chooseExercise(key){activeExercise=key;const e=exercises[key];document.getElementById("exerciseTitle").textContent=e.title;document.getElementById("exerciseDescription").textContent=e.description;document.getElementById("exerciseStatus").textContent="Session not started";document.getElementById("exerciseProgress").style.width="0%";document.getElementById("startExercise").disabled=false;document.getElementById("startExercise").textContent="Start 30-second session";document.getElementById("target").style.animation="none";document.getElementById("target").style.left="50%";document.getElementById("target").style.top="50%";}
+document.querySelectorAll("[data-exercise]").forEach(b=>b.addEventListener("click",()=>{chooseExercise(b.dataset.exercise);const panel=document.querySelector("#therapyView .panel");const headerH=document.querySelector("header").offsetHeight;window.scrollTo({top:panel.getBoundingClientRect().top+window.scrollY-headerH-12,behavior:"smooth"});}));
+document.getElementById("startExercise").addEventListener("click",()=>{if(timer)clearInterval(timer);seconds=30;const btn=document.getElementById("startExercise");btn.disabled=true;document.getElementById("exerciseStatus").textContent="Session in progress · 30s";if(activeExercise==="movement")document.getElementById("target").style.animation="moveSide 3s ease-in-out infinite alternate";else if(activeExercise==="focus")document.getElementById("target").style.animation="moveFocus 5s ease-in-out infinite alternate";timer=setInterval(()=>{seconds--;document.getElementById("exerciseProgress").style.width=((30-seconds)/30*100)+"%";document.getElementById("exerciseStatus").textContent=`Session in progress · ${seconds}s`;if(seconds<=0){clearInterval(timer);timer=null;btn.disabled=false;btn.textContent="Start again";document.getElementById("exerciseStatus").textContent="30-second session finished. Take a comfortable break.";addActivity("Exercise session",exercises[activeExercise].title);}},1000);});
+document.getElementById("completeExercise").addEventListener("click",()=>{if(timer){clearInterval(timer);timer=null;}addActivity("Exercise session",exercises[activeExercise].title+" (marked complete)");document.getElementById("exerciseStatus").textContent="Marked complete. Remember to keep it comfortable.";document.getElementById("startExercise").disabled=false;});
+const style=document.createElement("style");style.textContent="@keyframes moveSide{from{left:20%}to{left:80%}}@keyframes moveFocus{0%{left:25%;top:30%}50%{left:75%;top:65%}100%{left:50%;top:25%}}";document.head.appendChild(style);
+
+function getHistory(){try{return JSON.parse(localStorage.getItem("visioncareHistory")||"[]")}catch(e){return[]}}
+function addActivity(type,detail){const history=getHistory();history.unshift({type,detail,date:new Date().toLocaleString()});localStorage.setItem("visioncareHistory",JSON.stringify(history.slice(0,60)));renderHistory();}
+function renderHistory(){const h=getHistory();document.getElementById("sessionCount").textContent=h.filter(x=>x.type==="Exercise session").length;document.getElementById("screenCount").textContent=h.filter(x=>x.type==="Screening activity").length;document.getElementById("lastActivity").textContent=h.length?new Date(h[0].date).toLocaleDateString():"—";const list=document.getElementById("historyList");list.innerHTML="";if(!h.length){list.innerHTML='<p class="empty">No activity recorded yet. Try a screening or exercise.</p>';return;}h.slice(0,15).forEach(item=>{const el=document.createElement("div");el.className="history-item";const left=document.createElement("div");const strong=document.createElement("strong");strong.textContent=item.type;const detail=document.createElement("div");detail.style.color="var(--muted)";detail.textContent=item.detail;left.append(strong,detail);const date=document.createElement("small");date.style.color="var(--muted)";date.textContent=item.date;el.append(left,date);list.append(el);});}
+document.getElementById("clearHistory").addEventListener("click",()=>{if(confirm("Clear all VisionCare activity stored in this browser?")){localStorage.removeItem("visioncareHistory");renderHistory();}});
+renderHistory();
+</script>
+</body>
+</html>
